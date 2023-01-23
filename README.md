@@ -219,6 +219,16 @@ Navigate and expand the **Stages** tree and select POST to view the endpoint URL
     
  2. To execute the API from local machine, we are going to use Postman and/or Curl command.
     
+To run from Postman, select **POST**, paste the API invoke URL
+    
+Under **Body** select **raw** and paste the JSON above
+    
+Choose **Send**
 
+API should execute and return **HTTPStatusCode 200**
 
+To run this from terminal using Curl
+
+       $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager
+    
 
