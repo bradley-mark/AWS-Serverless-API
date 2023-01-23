@@ -269,8 +269,12 @@ To run from Postman, select **POST**, paste the API invoke URL
 Under **Body** select **raw** and paste the JSON above
     
 Choose **Send**
+    
+![image](https://user-images.githubusercontent.com/91480603/214174794-91295db9-8368-4254-8e57-2cfe82e7ac6e.png)
 
 API should execute and return **HTTPStatusCode 200**
+    
+![image](https://user-images.githubusercontent.com/91480603/214174822-573e4e37-c0c3-4a13-9b97-0b939e998c91.png)
 
 To run this from terminal using Curl
 
@@ -278,6 +282,8 @@ To run this from terminal using Curl
     
 3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select **lambda-apigateway** table, select **Explore items** tab, and the newly inserted item should be displayed.
     
+![image](https://user-images.githubusercontent.com/91480603/214174959-afb96c5f-27b8-43c1-9ad9-e7d6f22d3064.png)
+
 4. To get all the inserted items from the table, we can use the **list** operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
     
        {
@@ -286,14 +292,25 @@ To run this from terminal using Curl
            "payload": {
            }
        }
-    
+
+![image](https://user-images.githubusercontent.com/91480603/214175037-e4e11b7e-fd9a-4295-a792-2e2a9d9644a7.png)
+
+![image](https://user-images.githubusercontent.com/91480603/214175068-ddfff1f0-58c5-4806-b7e7-bf104c0a5e47.png)
+
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
     
 # Cleanup
     
 To delete the table, from DynamoDB console, select the table **lambda-apigateway** and click **Delete table**
+    
+![image](https://user-images.githubusercontent.com/91480603/214175104-c16ffda5-153c-44cd-b820-954a4591803e.png)
 
 To delete the Lambda, from the Lambda console, select lambda **LambdaFunctionOverHttps** click **Actions** then click **Delete**
     
+![image](https://user-images.githubusercontent.com/91480603/214175133-29656a1c-682a-4860-9414-0d4f47d3e541.png)
+
 To delete the API, from the API Gateway console, under APIs, select **DynamoDBOperations** click **Actions** then **Delete**
+    
+![image](https://user-images.githubusercontent.com/91480603/214175162-2b62a8ad-64c6-43fd-b313-dce2ab8248fe.png)
+
     
