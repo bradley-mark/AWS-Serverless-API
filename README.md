@@ -202,7 +202,22 @@ Navigate and expand the **Stages** tree and select POST to view the endpoint URL
     
 # Running the solution
     
-
+1. The Lambda function supports using the create operation to create an item in your DynamoDB table.
+    
+   To request this operation, use the following JSON:
+    
+      {
+          "operation": "create",
+          "tableName": "lambda-apigateway",
+          "payload": {
+              "Item": {
+                  "id": "1234ABCD",
+                  "number": 5
+              }
+          }
+      }
+    
+ 
     
 
 
