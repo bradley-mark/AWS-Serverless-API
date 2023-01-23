@@ -229,6 +229,8 @@ API should execute and return **HTTPStatusCode 200**
 
 To run this from terminal using Curl
 
-       $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager
+       $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://ejnggdo47b.execute-api.us-east-1.amazonaws.com/Prod/dynamodbmanager
+    
+
     
 
