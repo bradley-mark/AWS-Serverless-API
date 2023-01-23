@@ -37,3 +37,14 @@ The following is a sample request payload for a DynamoDB read item operation:
         }
     }
     
+# Setup
+
+**Create Lambda IAM Role**
+
+Create the execution role that gives your function permission to access AWS resources.
+
+1. Open the IAM console **https://console.aws.amazon.com/iamv2**
+2. In the navigation pane, choose **Roles**
+3. Choose **Create role**
+4. 
+
