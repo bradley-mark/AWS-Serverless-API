@@ -94,6 +94,9 @@ This custom policy has the permissions that the function needs to write data to 
 
 1. Open the Lambda console **https://console.aws.amazon.com/lambda/home**
 2. Choose **Create a function**
+
+![image](https://user-images.githubusercontent.com/91480603/214173895-0f91c26e-ed28-484b-a921-8fa5c207c0a9.png)
+
 3. Select **Author from scratch**
 4. **Basic information** Function name **LambdaFunctionOverHttps** Runtime **Python 3.7** Architecture **x86_64**
 5. Permissions **Use an existing role** and select **lambda-apigateway-role**
