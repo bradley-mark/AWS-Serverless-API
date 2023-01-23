@@ -48,34 +48,35 @@ Create the execution role that gives your function permission to access AWS reso
 3. Choose **Create role**
 4. **Select trusted entity** - **AWS service** **Lambda** **Next**
 5. Choose **Create policy** for custom policy with permission to DynamoDB and CloudWatch Logs
-This custom policy has the permissions that the function needs to write data to DynamoDB and upload logs.
+ 
+This custom policy has the permissions that the function needs to write data to DynamoDB and upload logs
 
-{
-"Version": "2012-10-17",
-"Statement": [
-{
-  "Sid": "Stmt1428341300017",
-  "Action": [
-    "dynamodb:DeleteItem",
-    "dynamodb:GetItem",
-    "dynamodb:PutItem",
-    "dynamodb:Query",
-    "dynamodb:Scan",
-    "dynamodb:UpdateItem"
-  ],
-  "Effect": "Allow",
-  "Resource": "*"
-},
-{
-  "Sid": "",
-  "Resource": "*",
-  "Action": [
-    "logs:CreateLogGroup",
-    "logs:CreateLogStream",
-    "logs:PutLogEvents"
-  ],
-  "Effect": "Allow"
-}
-]
-}
-
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+    {
+      "Sid": "Stmt1428341300017",
+      "Action": [
+        "dynamodb:DeleteItem",
+        "dynamodb:GetItem",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:UpdateItem"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Sid": "",
+      "Resource": "*",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Effect": "Allow"
+    }
+    ]    
+    }
+    
