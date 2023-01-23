@@ -21,7 +21,6 @@ The following is a sample request payload for a DynamoDB create item operation:
         "Item": {
             "id": "1",
             "name": "Bob"
-           }
-       }
-   }
-
+        }
+    }
+}
