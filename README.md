@@ -80,6 +80,8 @@ This custom policy has the permissions that the function needs to write data to 
     ]    
     }
     
-6.**Next tags** **Next Review** Name **lambda-apigateway-policy**
+6. **Next tags**  **Next Review**  Name **lambda-apigateway-policy**
 7. Choose **Create policy**
+
+#Create Lambda Function
 
