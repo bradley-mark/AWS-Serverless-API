@@ -231,6 +231,19 @@ To run this from terminal using Curl
 
        $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://ejnggdo47b.execute-api.us-east-1.amazonaws.com/Prod/dynamodbmanager
     
-
+3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select **lambda-apigateway** table, select **Explore items** tab, and the newly inserted item should be displayed.
+    
+4. To get all the inserted items from the table, we can use the **list** operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
+    
+       {
+           "operation": "list",
+           "tableName": "lambda-apigateway",
+           "payload": {
+           }
+       }
+    
+We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
+    
+# Cleanup
     
 
