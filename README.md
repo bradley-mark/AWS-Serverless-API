@@ -206,16 +206,16 @@ Navigate and expand the **Stages** tree and select POST to view the endpoint URL
     
    To request this operation, use the following JSON:
     
-      {
-          "operation": "create",
-          "tableName": "lambda-apigateway",
-          "payload": {
-              "Item": {
-                  "id": "1234ABCD",
-                  "number": 5
-              }
-          }
-      }
+       {
+           "operation": "create",
+           "tableName": "lambda-apigateway",
+           "payload": {
+               "Item": {
+                   "id": "1234ABCD",
+                   "number": 5
+               }
+           }
+       }
     
  
     
