@@ -163,11 +163,10 @@ We haven't created DynamoDB and the API yet, so we'll do a sample echo operation
            }
        }
 
+![image](https://user-images.githubusercontent.com/91480603/214163079-427d44da-7b43-4aed-acc7-a15f97d2372b.png)
 
 4. Click **Save**
 5. Click **Test**
-
-![image](https://user-images.githubusercontent.com/91480603/214163079-427d44da-7b43-4aed-acc7-a15f97d2372b.png)
 
 ![image](https://user-images.githubusercontent.com/91480603/214163190-e85c4f21-6a01-404c-9fdc-fea3a3c5429f.png)
 
