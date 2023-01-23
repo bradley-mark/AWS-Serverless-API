@@ -97,7 +97,11 @@ This custom policy has the permissions that the function needs to write data to 
 3. Select **Author from scratch**
 4. **Basic information** Function name **LambdaFunctionOverHttps** Runtime **Python 3.7** Architecture **x86_64**
 5. Permissions **Use an existing role** and select **lambda-apigateway-role**
+
+![image](https://user-images.githubusercontent.com/91480603/214162587-281cfe86-75c4-4b9b-ab92-0e8ced4bdd6e.png)
+
 6. Choose **Create function**
+
 7. Replace **Code** **Code source** with the following code snippet and click **Deploy**
 
         from __future__ import print_function
@@ -137,7 +141,8 @@ This custom policy has the permissions that the function needs to write data to 
         else:
             raise ValueError('Unrecognized operation "{}"'.format(operation))
         
-  
+![image](https://user-images.githubusercontent.com/91480603/214162709-1a63cf2d-4987-44a8-9e19-2a36e92066fa.png)
+
 # Test Lambda Function
 
 We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
@@ -159,7 +164,11 @@ We haven't created DynamoDB and the API yet, so we'll do a sample echo operation
 4. Click **Save**
 5. Click **Test**
 
-Now we are ready to creeate DynamoDB and an API using Lambda as the backend
+![image](https://user-images.githubusercontent.com/91480603/214163079-427d44da-7b43-4aed-acc7-a15f97d2372b.png)
+
+![image](https://user-images.githubusercontent.com/91480603/214163190-e85c4f21-6a01-404c-9fdc-fea3a3c5429f.png)
+
+Now we are ready to create DynamoDB and an API using Lambda as the backend
 
 # Creating DynamoDB Table
 
@@ -169,37 +178,71 @@ Now we are ready to creeate DynamoDB and an API using Lambda as the backend
 4. Partition key - **id** - **String**
 5. Choose **Create table**
 
+![image](https://user-images.githubusercontent.com/91480603/214163247-34949982-ddc5-4695-b094-adaad7fb7dca.png)
+
 # Create API
 
 1.  Open the API Gateway console **https://console.aws.amazon.com/apigateway/main**
 2.  APIs choose **Rest API** - **Build**
+
+![image](https://user-images.githubusercontent.com/91480603/214163316-2cc8e5c1-30ba-4fb6-afbc-7e8b4c7b1bfb.png)
+
 3.  Choose the protocol **REST**
 4.  Create new API **New API**
 5.  Settings API name **DynamoDBOperations**
+
+![image](https://user-images.githubusercontent.com/91480603/214163404-9fce5a86-59e2-485a-8601-270ba126640d.png)
+
 6.  Choose **Create API**
 7.  Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next
 Choose **Actions** and **Create Resource**
+
+![image](https://user-images.githubusercontent.com/91480603/214163536-45c558b2-a0a4-4693-8ab4-210b6f4c67e0.png)
+
 8.  Create Resource Name **DynamoDBManager** and Resouce Path will get auto-populated
 9.  Select **Create Resource**
+
+![image](https://user-images.githubusercontent.com/91480603/214163681-e497ff98-a016-42c4-a583-7f2244ce6504.png)
+
 Create a POST Method for the API with dynamodbmanager resource selected
 10.  Choose **Actions** and **Create Method**
+
+![image](https://user-images.githubusercontent.com/91480603/214163725-ff95a958-eee4-4c72-8fd7-278db0c29832.png)
+
 11.  Select **POST** from the drop down and click checkmark
-The integration will come up automatically with "Lambda Function" option selected.
+
+![image](https://user-images.githubusercontent.com/91480603/214163767-1e7be4e6-3278-4278-8d40-759e9fa117d6.png)
+
+The integration will come up automatically with **Lambda Function** option selected.
 12. Select **LambdaFunctionOverHttps** function that we created earlier and select **Save**
+
+![image](https://user-images.githubusercontent.com/91480603/214163851-e98ff2f6-6429-49ad-94c3-38111d119811.png)
+
 13. Add Permission to Lambda Function - **OK**
 
+![image](https://user-images.githubusercontent.com/91480603/214163900-ae224591-18f1-4425-b52f-7931584e14a2.png)
+
 The API-Lambda integration is complete!
+
+![image](https://user-images.githubusercontent.com/91480603/214163996-334f4064-a4ca-4d3f-b746-c3530231ed32.png)
 
 # Deploy the API
 
 1. Select **Actions**, select **Deploy API**
+
+![image](https://user-images.githubusercontent.com/91480603/214164148-cb36973e-50ce-478e-a683-668281c2e31f.png)
+
 2. Select Deployment Stage <New Stage> - Stage name **Prod**
 3. Choose **Deploy**
-    
+
+![image](https://user-images.githubusercontent.com/91480603/214164237-63252062-9922-4a62-8fef-096f908c5867.png)
+
 We are ready to run the solution. To invoke the API endpoint we need the endpoint URL
     
 Navigate and expand the **Stages** tree and select POST to view the endpoint URL
     
+![image](https://user-images.githubusercontent.com/91480603/214164300-6063245e-e4d6-4493-9bba-552ce06ed3d4.png)
+
 # Running the solution
     
 1. The Lambda function supports using the create operation to create an item in your DynamoDB table.
