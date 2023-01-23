@@ -246,4 +246,9 @@ We have successfully created a serverless API using API Gateway, Lambda, and Dyn
     
 # Cleanup
     
+To delete the table, from DynamoDB console, select the table **lambda-apigateway** and click **Delete table**
 
+To delete the Lambda, from the Lambda console, select lambda **LambdaFunctionOverHttps** click **Actions** then click **Delete**
+    
+To delete the API, from the API Gateway console, under APIs, select **DynamoDBOperations** click **Actions** then **Delete**
+    
