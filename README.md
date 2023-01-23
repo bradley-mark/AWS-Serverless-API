@@ -138,4 +138,26 @@ This custom policy has the permissions that the function needs to write data to 
             raise ValueError('Unrecognized operation "{}"'.format(operation))
         
   
+# Test Lambda Function
+
+We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
+
+1. Choose **Test**
+2. **Create new event** Event name **echotest**
+3. Copy/paste JSON
+
+    {
+        "operation": "echo",
+        "payload": {
+            "somekey1": "somevalue1",
+            "somekey2": "somevalue2"
+        }
+    }
+
+4. Click **Save**
+5. Click **Test**
+
+Now we are ready to creeate DynamoDB and an API using Lambda as the backend
+
+# Creating DynamoDB Table
 
