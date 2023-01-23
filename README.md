@@ -187,10 +187,23 @@ Create a POST Method for the API with dynamodbmanager resource selected
 The integration will come up automatically with "Lambda Function" option selected.
 12. Select **LambdaFunctionOverHttps** function that we created earlier and select **Save**
 13. Add Permission to Lambda Function - **OK**
-14. 
 
+The API-Lambda integration is complete!
 
+# Deploy the API
 
+1. Select **Actions**, select **Deploy API**
+2. Select Deployment Stage <New Stage> - Stage name **Prod**
+3. Choose **Deploy**
+    
+We are ready to run the solution. To invoke the API endpoint we need the endpoint URL
+    
+Navigate and expand the **Stages** tree and select POST to view the endpoint URL
+    
+# Running the solution
+    
+
+    
 
 
 
