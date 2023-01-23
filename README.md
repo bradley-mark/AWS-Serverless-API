@@ -146,13 +146,15 @@ We haven't created DynamoDB and the API yet, so we'll do a sample echo operation
 2. **Create new event** Event name **echotest**
 3. Copy/paste JSON
 
-      {
-          "operation": "echo",
-          "payload": {
-              "somekey1": "somevalue1",
-              "somekey2": "somevalue2"
-          }
-      }
+
+       {
+           "operation": "echo",
+           "payload": {
+               "somekey1": "somevalue1",
+               "somekey2": "somevalue2"
+           }
+       }
+
 
 4. Click **Save**
 5. Click **Test**
