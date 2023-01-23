@@ -217,7 +217,7 @@ Navigate and expand the **Stages** tree and select POST to view the endpoint URL
            }
        }
     
- 
+ 2. To execute the API from local machine, we are going to use Postman and/or Curl command.
     
 
 
