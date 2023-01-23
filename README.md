@@ -173,4 +173,24 @@ Now we are ready to creeate DynamoDB and an API using Lambda as the backend
 
 1.  Open the API Gateway console **https://console.aws.amazon.com/apigateway/main**
 2.  APIs choose **Rest API** - **Build**
-3.  
+3.  Choose the protocol **REST**
+4.  Create new API **New API**
+5.  Settings API name **DynamoDBOperations**
+6.  Choose **Create API**
+7.  Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next
+Choose **Actions** and **Create Resource**
+8.  Create Resource Name **DynamoDBManager** and Resouce Path will get auto-populated
+9.  Select **Create Resource**
+Create a POST Method for the API with dynamodbmanager resource selected
+10.  Choose **Actions** and **Create Method**
+11.  Select **POST** from the drop down and click checkmark
+The integration will come up automatically with "Lambda Function" option selected.
+12. Select **LambdaFunctionOverHttps** function that we created earlier and select **Save**
+13. Add Permission to Lambda Function - **OK**
+14. 
+
+
+
+
+
+
