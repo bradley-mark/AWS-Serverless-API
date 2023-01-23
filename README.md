@@ -14,7 +14,7 @@ The request payload you send in the POST request identifies the DynamoDB operati
 
 The following is a sample request payload for a DynamoDB create item operation:
 
-{
+    {
     "operation": "create",
     "tableName": "lambda-apigateway",
     "payload": {
