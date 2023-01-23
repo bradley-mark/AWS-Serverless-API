@@ -163,3 +163,14 @@ Now we are ready to creeate DynamoDB and an API using Lambda as the backend
 
 # Creating DynamoDB Table
 
+1. Open the DynamoDB console **https://console.aws.amazon.com/dynamodbv2/home**
+2. Choose **Create table**
+3. Table name - **lambda-apigateway** 
+4. Partition key - **id** - **String**
+5. Choose **Create table**
+
+# Creeate API
+
+1.  Open the API Gateway console **https://console.aws.amazon.com/apigateway/main**
+2.  APIs choose **Rest API** - **Build**
+3.  
