@@ -91,7 +91,7 @@ This custom policy has the permissions that the function needs to write data to 
 4. **Basic information** Function name **LambdaFunctionOverHttps** Runtime **Python 3.7** Architecture **x86_64**
 5. Permissions **Use an existing role** and select **lambda-apigateway-policy**
 6. Choose **Create function**
-7. Replace **Code** **Code source** with the following code snippet and click "Save"
+7. Replace **Code** **Code source** with the following code snippet and click File and Save
 
         from __future__ import print_function
 
