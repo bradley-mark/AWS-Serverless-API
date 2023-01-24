@@ -162,16 +162,15 @@ We haven't created DynamoDB and the API yet, so we'll do a sample echo operation
 1. Choose **Test**
 2. **Create new event** Event name **echotest**
 3. Copy/paste JSON
-
-
-       {
-           "operation": "echo",
-           "payload": {
-               "somekey1": "somevalue1",
-               "somekey2": "somevalue2"
-           }
-       }
-
+```yaml
+{
+    "operation": "echo",
+    "payload": {
+        "somekey1": "somevalue1",
+        "somekey2": "somevalue2"
+    }
+}
+```
 ![image](https://user-images.githubusercontent.com/91480603/214163079-427d44da-7b43-4aed-acc7-a15f97d2372b.png)
 
 4. Click **Save**
