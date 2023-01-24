@@ -4,7 +4,7 @@ High Level Design
 
 ![image](https://user-images.githubusercontent.com/91480603/214354768-8bc5f20a-a8f5-40a5-a206-2441a0e7965d.png)
 
-An Amazon API Gateway is a collection of resources and methods. We will create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). When you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+Amazon API Gateway is a collection of resources and methods. We will create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). When you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
