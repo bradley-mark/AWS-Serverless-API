@@ -14,6 +14,7 @@ The POST method on the DynamoDBManager resource supports the following DynamoDB 
 The request payload you send in the POST request identifies the DynamoDB operation and provides necessary data. 
 
 For example:
+
 The following is a sample request payload for a DynamoDB create item operation:
 
 ```yaml
