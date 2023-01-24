@@ -30,6 +30,18 @@ The following is a sample request payload for a DynamoDB create item operation:
 }
 
 
+{
+    "operation": "create",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "1",
+            "name": "Bob"
+        }
+    }
+}
+
+
 
     {
         "operation": "create",
