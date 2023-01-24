@@ -18,6 +18,16 @@ The request payload you send in the POST request identifies the DynamoDB operati
 
 The following is a sample request payload for a DynamoDB create item operation:
 Markup :  `code()`
+{
+    "operation": "read",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1"
+        }
+    }
+}
+
     {
         "operation": "create",
         "tableName": "lambda-apigateway",
