@@ -6,7 +6,6 @@ An Amazon API Gateway is a collection of resources and methods. We will create o
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
-Markup : - Bullet list
 - Create, update, and delete an item.
 
 - Read an item.
