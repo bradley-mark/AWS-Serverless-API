@@ -17,17 +17,19 @@ The POST method on the DynamoDBManager resource supports the following DynamoDB 
 The request payload you send in the POST request identifies the DynamoDB operation and provides necessary data. For example:
 
 The following is a sample request payload for a DynamoDB create item operation:
-code()
-Markup :  `code()`
+
 {
-    "operation": "read",
+    "operation": "create",
     "tableName": "lambda-apigateway",
     "payload": {
-        "Key": {
-            "id": "1"
+        "Item": {
+            "id": "1",
+            "name": "Bob"
         }
     }
 }
+
+
 
     {
         "operation": "create",
