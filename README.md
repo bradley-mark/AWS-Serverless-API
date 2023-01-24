@@ -20,7 +20,6 @@ The following is a sample request payload for a DynamoDB create item operation:
 
 code()
 Markup :  `code()`
-
 {
     "operation": "create",
     "tableName": "lambda-apigateway",
