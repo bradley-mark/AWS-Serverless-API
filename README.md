@@ -258,17 +258,18 @@ Navigate and expand the **Stages** tree and select POST to view the endpoint URL
 1. The Lambda function supports using the create operation to create an item in your DynamoDB table.
     
    To request this operation, use the following JSON:
-    
-       {
-           "operation": "create",
-           "tableName": "lambda-apigateway",
-           "payload": {
-               "Item": {
-                   "id": "1234ABCD",
-                   "number": 5
-               }
-           }
-       }
+```yaml
+{
+    "operation": "create",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "1234ABCD",
+            "number": 5
+        }
+    }
+}
+```
     
  2. To execute the API from local machine, we are going to use Postman and/or Curl command.
     
@@ -293,14 +294,14 @@ To run this from terminal using Curl
 ![image](https://user-images.githubusercontent.com/91480603/214174959-afb96c5f-27b8-43c1-9ad9-e7d6f22d3064.png)
 
 4. To get all the inserted items from the table, we can use the **list** operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
-    
-       {
-           "operation": "list",
-           "tableName": "lambda-apigateway",
-           "payload": {
-           }
-       }
-
+```yaml   
+{
+    "operation": "list",
+    "tableName": "lambda-apigateway",
+    "payload": {
+    }
+}
+```
 ![image](https://user-images.githubusercontent.com/91480603/214175037-e4e11b7e-fd9a-4295-a792-2e2a9d9644a7.png)
 
 ![image](https://user-images.githubusercontent.com/91480603/214175068-ddfff1f0-58c5-4806-b7e7-bf104c0a5e47.png)
