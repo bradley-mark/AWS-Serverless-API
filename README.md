@@ -55,7 +55,7 @@ Create the execution role that gives your function permission to access AWS reso
 3. Choose **Create policy** for custom policy with permission to DynamoDB and CloudWatch Logs
  
 This custom policy has the permissions that the function needs to write data to DynamoDB and upload logs
-
+```yaml
     {
     "Version": "2012-10-17",
     "Statement": [
@@ -84,7 +84,7 @@ This custom policy has the permissions that the function needs to write data to 
     }
     ]    
     }
-    
+```    
 7. **Next tags**  **Next Review**  Name **lambda-apigateway-policy**
 8. Choose **Create policy**
 
