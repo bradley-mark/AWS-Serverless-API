@@ -1,6 +1,6 @@
 # AWS-Serverless-API
 
-High Level Design
+**High Level Design**
 
 ![image](https://user-images.githubusercontent.com/91480603/214354768-8bc5f20a-a8f5-40a5-a206-2441a0e7965d.png)
 
