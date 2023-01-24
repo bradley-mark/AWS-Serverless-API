@@ -33,15 +33,15 @@ The following is a sample request payload for a DynamoDB create item operation:
 The following is a sample request payload for a DynamoDB read item operation:
 
 ```yaml
-    {
-        "operation": "read",
-        "tableName": "lambda-apigateway",
-        "payload": {
-            "Key": {
-                "id": "1"
-            }
+{
+    "operation": "read",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1"
         }
     }
+}
 ```
 
 # Setup
@@ -56,34 +56,34 @@ Create the execution role that gives your function permission to access AWS reso
  
 This custom policy has the permissions that the function needs to write data to DynamoDB and upload logs
 ```yaml
-    {
-    "Version": "2012-10-17",
-    "Statement": [
-    {
-      "Sid": "Stmt1428341300017",
-      "Action": [
-        "dynamodb:DeleteItem",
-        "dynamodb:GetItem",
-        "dynamodb:PutItem",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:UpdateItem"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Sid": "",
-      "Resource": "*",
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Effect": "Allow"
-    }
-    ]    
-    }
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+  "Sid": "Stmt1428341300017",
+  "Action": [
+    "dynamodb:DeleteItem",
+    "dynamodb:GetItem",
+    "dynamodb:PutItem",
+    "dynamodb:Query",
+    "dynamodb:Scan",
+    "dynamodb:UpdateItem"
+  ],
+  "Effect": "Allow",
+  "Resource": "*"
+},
+{
+  "Sid": "",
+  "Resource": "*",
+  "Action": [
+    "logs:CreateLogGroup",
+    "logs:CreateLogStream",
+    "logs:PutLogEvents"
+  ],
+  "Effect": "Allow"
+}
+]
+}
 ```    
 7. **Next tags**  **Next Review**  Name **lambda-apigateway-policy**
 8. Choose **Create policy**
@@ -114,6 +114,8 @@ This custom policy has the permissions that the function needs to write data to 
 
 7. Replace **Code** **Code source** with the following code snippet and click **Deploy**
 
+**Example Python Code**
+```python
         from __future__ import print_function
 
         import boto3
@@ -150,7 +152,7 @@ This custom policy has the permissions that the function needs to write data to 
             return operations[operation](event.get('payload'))
         else:
             raise ValueError('Unrecognized operation "{}"'.format(operation))
-        
+```
 ![image](https://user-images.githubusercontent.com/91480603/214162709-1a63cf2d-4987-44a8-9e19-2a36e92066fa.png)
 
 # Test Lambda Function
